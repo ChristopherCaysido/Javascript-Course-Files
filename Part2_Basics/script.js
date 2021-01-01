@@ -211,13 +211,52 @@ yearUntilRetirement(1999, 'Christopher');
  /*********************************************************
   * Arrays
   */
-
+/*
   var names = ['Dick','Johnson','Willy'];
   var years = new Array(1988,1920,1911)
 console.log(names[0],names[1]);
 
-/* Selecting the element and then changing the value of the element*/
+/* Selecting the element and then changing the value of the element
 
 names[0] = 'Andrew';
 console.log(names[0]);
+*/
+/* CODING CHALLENGE 3 TIP CALCULATOR
+Bills were 124, 48, 268 dollars
 
+Tip is 20% when bill is less than 50 dollars
+Tip is 15 percent when bill is between 50 and 200
+Tip is 10 percent when bill is over 200
+
+Output would be 2 arrays. 
+The first array are the computed tips
+The second array are the tips + bill
+
+*/
+
+var bills = [124, 48, 268];
+var tips = [];
+var totalCost = [];
+var tipRate = 0;
+var n = 0;
+
+function calculateTIP(bills){
+    if(bills < 50){
+        tipRate = 0.2;
+        tips.push(tipRate * bills);
+        totalCost.push((tipRate + 1) * bills);
+    } else if (bills> 50 && bills < 200){
+        tipRate = 0.15;
+        tips.push(tipRate * bills);
+        totalCost.push((tipRate + 1) * bills);
+    } else {
+        tipRate = 0.10;
+        tips.push(tipRate * bills);
+        totalCost.push((tipRate + 1) * bills);
+    }
+}
+
+calculateTIP(bills[0]);
+calculateTIP(bills[1]);
+calculateTIP(bills[2]);
+console.log(tips,totalCost)
