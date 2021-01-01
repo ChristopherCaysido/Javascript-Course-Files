@@ -191,6 +191,8 @@ yearUntilRetirement(1999, 'Christopher');
 }*/
 
 // function expresseion
+
+/*
  var whatDoYouDo = function(job,firstName) {
     switch(job) {
         case 'teacher':
@@ -204,3 +206,18 @@ yearUntilRetirement(1999, 'Christopher');
     }
  }
  whatDoYouDo('teacher','dio brando');
+ */
+
+ /*********************************************************
+  * Arrays
+  */
+
+  var names = ['Dick','Johnson','Willy'];
+  var years = new Array(1988,1920,1911)
+console.log(names[0],names[1]);
+
+/* Selecting the element and then changing the value of the element*/
+
+names[0] = 'Andrew';
+console.log(names[0]);
+
