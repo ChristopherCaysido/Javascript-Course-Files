@@ -233,7 +233,7 @@ The first array are the computed tips
 The second array are the tips + bill
 
 */
-
+/*
 var bills = [124, 48, 268];
 var tips = [];
 var totalCost = [];
@@ -259,4 +259,90 @@ function calculateTIP(bills){
 calculateTIP(bills[0]);
 calculateTIP(bills[1]);
 calculateTIP(bills[2]);
-console.log(tips,totalCost)
+console.log(tips,totalCost);
+*/
+
+/****************************************
+ *Objects and Properties
+ */
+/* One way of initializing an object */
+
+//  var john = {
+//      firstName: 'John',
+//      lastName: 'Smith',
+//      birthYear: 1990,
+//      family: ['Andrew', 'Mark', 'Risu'],
+//      job:'Pediatrician',
+//      isMarried:false
+//  };
+
+ /* getting data from an object */
+
+//  console.log(john.firstname);
+//  console.log(john['birthYear']);
+//  var x = 'job'
+//  console.log(john[x]);
+
+ /* Another way of Declaring an Object
+ new Object() syntax*/
+
+//  var Jane = new Object();
+//  jane = {
+//      firstName:'Janelyn',
+//      lastName:'Marcus',
+//      birthYear: 1999,
+//      family:[john, 'Mark', 'Risu'],
+//      job:'Neuroscientist',
+//     isMarried:false
+//  };
+
+ /* You can also set information in a propery of an object */
+
+// jane.firstName = 'Jane';
+// console.log(jane.firstName);
+
+/*****************************************
+ * Object Methods
+ * Functions in Objects is a Method
+ */
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Andrew', 'Mark', 'Risu'],
+    job:'Pediatrician',
+    isMarried:false,
+    calcAge: function(birthYear){
+        return 2020 - this.birthYear; // 'this' syntax can call itself
+    }
+};
+
+// You can set properties using object methods
+
+
+console.log(john.calcAge(john.birthYear));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
