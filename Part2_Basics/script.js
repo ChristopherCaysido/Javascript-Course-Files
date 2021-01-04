@@ -306,22 +306,70 @@ console.log(tips,totalCost);
  * Functions in Objects is a Method
  */
 
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['Andrew', 'Mark', 'Risu'],
+//     job:'Pediatrician',
+//     isMarried:false,
+//     calcAge: function(birthYear){
+//         return 2020 - this.birthYear; // 'this' syntax can call itself
+//     }
+// };
+
+// // You can set properties using object methods
+
+
+// console.log(john.calcAge(john.birthYear));
+
+/******************************
+ * CODING CHALLENGE 3
+ */
+
+ // John and Mark BMI Comparison
+ // Create Objects with their full name, mass and height
+ // Add a method for each object to calculate the BMI
+ // Console log the highest bmi with respective BMI
+
 var john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    birthYear: 1990,
-    family: ['Andrew', 'Mark', 'Risu'],
-    job:'Pediatrician',
-    isMarried:false,
-    calcAge: function(birthYear){
-        return 2020 - this.birthYear; // 'this' syntax can call itself
+    fullName:'John Joe',
+    height: 153,
+    mass:6700,
+    bmi:0,
+    calculateBMI:function(h,m){
+        this.bmi = m/(h*h);
+    },
+}
+
+var mark = {
+    fullName:'Mark Hamil',
+    height: 175,
+    mass:7900,
+    bmi:0,
+    calculateBMI:function(h,m){
+        this.bmi = m/(h*h);
     }
-};
-
-// You can set properties using object methods
+}
 
 
-console.log(john.calcAge(john.birthYear));
+john.calculateBMI(john.height,john.mass);
+mark.calculateBMI(mark.height,mark.mass);
+
+console.log(john.bmi);
+console.log(mark.bmi);
+function compareBMI(name1,name2,bmi1,bmi2,){
+    if(bmi1>bmi2){
+        console.log(name1+' has the greater BMI which is ' + bmi1);
+    } else if(bmi2 > bmi1){
+        console.log(name2.fullName+' has the greater BMI which is ' + bmi1);
+    } else if (bmi2 === bmi1){
+        console.log('They have equal BMI');
+    };
+}
+
+compareBMI(john.fullName,mark.fullName,john.bmi,mark.bmi);
+
 
 
 
