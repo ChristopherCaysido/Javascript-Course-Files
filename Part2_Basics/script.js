@@ -332,43 +332,52 @@ console.log(tips,totalCost);
  // Add a method for each object to calculate the BMI
  // Console log the highest bmi with respective BMI
 
-var john = {
-    fullName:'John Joe',
-    height: 153,
-    mass:6700,
-    bmi:0,
-    calculateBMI:function(h,m){
-        this.bmi = m/(h*h);
-    },
+// var john = {
+//     fullName:'John Joe',
+//     height: 153,
+//     mass:6700,
+//     bmi:0,
+//     calculateBMI:function(h,m){
+//         this.bmi = m/(h*h);
+//     },
+// }
+
+// var mark = {
+//     fullName:'Mark Hamil',
+//     height: 175,
+//     mass:7900,
+//     bmi:0,
+//     calculateBMI:function(h,m){
+//         this.bmi = m/(h*h);
+//     }
+// }
+
+
+// john.calculateBMI(john.height,john.mass);
+// mark.calculateBMI(mark.height,mark.mass);
+
+// console.log(john.bmi);
+// console.log(mark.bmi);
+// function compareBMI(name1,name2,bmi1,bmi2,){
+//     if(bmi1>bmi2){
+//         console.log(name1+' has the greater BMI which is ' + bmi1);
+//     } else if(bmi2 > bmi1){
+//         console.log(name2.fullName+' has the greater BMI which is ' + bmi1);
+//     } else if (bmi2 === bmi1){
+//         console.log('They have equal BMI');
+//     };
+// }
+
+// compareBMI(john.fullName,mark.fullName,john.bmi,mark.bmi);
+
+/*************************************************
+ * Loops
+ */
+
+for (var i = 0; i < 10; i++){
+    console.log(i + '\n');
 }
-
-var mark = {
-    fullName:'Mark Hamil',
-    height: 175,
-    mass:7900,
-    bmi:0,
-    calculateBMI:function(h,m){
-        this.bmi = m/(h*h);
-    }
-}
-
-
-john.calculateBMI(john.height,john.mass);
-mark.calculateBMI(mark.height,mark.mass);
-
-console.log(john.bmi);
-console.log(mark.bmi);
-function compareBMI(name1,name2,bmi1,bmi2,){
-    if(bmi1>bmi2){
-        console.log(name1+' has the greater BMI which is ' + bmi1);
-    } else if(bmi2 > bmi1){
-        console.log(name2.fullName+' has the greater BMI which is ' + bmi1);
-    } else if (bmi2 === bmi1){
-        console.log('They have equal BMI');
-    };
-}
-
-compareBMI(john.fullName,mark.fullName,john.bmi,mark.bmi);
+// i = 0, 0 < 10 true, log i to console, i++
 
 
 
