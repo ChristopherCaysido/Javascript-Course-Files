@@ -374,12 +374,66 @@ console.log(tips,totalCost);
  * Loops
  */
 
-for (var i = 0; i < 10; i++){
-    console.log(i + '\n');
+// for (var i = 0; i < 10; i++){
+//     console.log(i + '\n');
+// }
+// // i = 0, 0 < 10 true, log i to console, i++
+
+// var names = [false,100000,'Dick','Johnson','Willy',4];
+// for (var i = 0; i < names.length; i++){
+//     console.log(names[i]);
+// }
+// var i = 0;
+// while(i < names.length) {
+//     console.log(names[i]);
+//     i++;
+// }
+
+// for (var i = 0; i < names.length; i++) {
+//     if (typeof names[i] !== 'string') continue;
+//     console.log(names[i])
+// }
+
+// for (var i = 0; i < names.length; i++) {
+//     if (typeof names[i] !== 'string') break;
+//     console.log(names[i])
+// }
+
+
+/*****CODING CHALLENGES
+ * 
+ * 
+ * 
+ */
+
+var bills = [124, 48, 268,180,42];
+var tips = [];
+var totalCost = [];
+var tipRate = 0;
+var n = 0;
+
+function calculateTIP(bills){
+    for (var i=0;i<bills.length;i++){
+        if(bills[i] < 50){
+            tipRate = 0.2;
+            tips.push(tipRate * bills[i]);
+            totalCost.push((tipRate + 1)*bills[i])
+        } else if (bills> 50 && bills[i] < 200){
+            tipRate = 0.15;
+            tips.push(tipRate * bills[i]);
+            totalCost.push((tipRate + 1)*bills[i])
+        } else {
+            tipRate = 0.10;
+            tips.push(tipRate * bills[i]);
+            totalCost.push((tipRate + 1)*bills[i])
+    }
 }
-// i = 0, 0 < 10 true, log i to console, i++
+    for (var j = 0; j<tips.length;j++){
+        console.log('Bill: $'+bills[j]+' Tip: $'+tips[j]+' Total Cost: $'+ totalCost[j]);
+    }
+}
 
-
+calculateTIP(bills)
 
 
 
