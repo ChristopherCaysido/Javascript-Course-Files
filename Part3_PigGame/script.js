@@ -8,6 +8,10 @@ activePlayer = 0;
 // var displayRoll = document.querySelector('#current--' + activePlayer).textContent = dice;
 // // document.querySelector('#current--' + activePlayer).innerHTML = '<em>'dice'</em>';
 
+function nextPlayer(){
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+}
+
 document.querySelector('.dice').style.display = 'none'; 
 
 
@@ -25,6 +29,26 @@ document.querySelector('.btn--roll').addEventListener('click',function(){
         document.querySelector('#current--'+activePlayer).textContent = roundScore;
     } else {
         //Next Player
-        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        document.querySelector('#current--'+activePlayer).textContent = 0;
+        roundScore = 0;
+        nextPlayer();
+        
     }
+});
+
+document.querySelector('.btn--hold').addEventListener('click',function(){
+    //Update Global Scores 
+    scores[activePlayer] += roundScore;
+    //Update UI
+    document.querySelector('#score--'+activePlayer).textContent = scores[activePlayer];
+    //Pass it to other player
+    if(scores[activePlayer] >= 100){
+        document.querySelector('#name--'+activePlayer).textContent = 'Winner';
+    } else {
+        document.querySelector('#current--'+activePlayer).textContent = 0;
+        roundScore = 0;
+        nextPlayer();
+    }
+    
+    
 });
