@@ -1,9 +1,7 @@
 
-var scores, roundScore;
-scores = [0,0];
-roundScore = 0;
-activePlayer = 0;
+var scores, roundScore, activePlayer;
 
+initFunction();
 // dice = Math.floor(Math.random()*6) + 1;
 // var displayRoll = document.querySelector('#current--' + activePlayer).textContent = dice;
 // // document.querySelector('#current--' + activePlayer).innerHTML = '<em>'dice'</em>';
@@ -14,6 +12,7 @@ function nextPlayer(){
 
 document.querySelector('.dice').style.display = 'none'; 
 
+document.querySelector('.btn--new').addEventListener('click',initFunction)
 
 document.querySelector('.btn--roll').addEventListener('click',function(){
     // Roll a Random Number
@@ -49,6 +48,18 @@ document.querySelector('.btn--hold').addEventListener('click',function(){
         roundScore = 0;
         nextPlayer();
     }
-    
-    
+
 });
+
+function initFunction(){
+    scores = [0,0];
+    roundScore = 0;
+    activePlayer = 0;
+    document.getElementById('score--0').textContent = 0;
+    document.getElementById('score--1').textContent = 0;
+    document.getElementById('current--0').textContent = 0;
+    document.getElementById('current--1').textContent = 0;
+    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('#name--0').textContent = 'Player 1';
+    document.querySelector('#name--1').textContent = 'Player 2';
+}
