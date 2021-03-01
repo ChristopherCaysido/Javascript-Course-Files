@@ -16,8 +16,6 @@ document.querySelector('.btn--new').addEventListener('click',initFunction)
 
 document.querySelector('.btn--roll').addEventListener('click',function(){
     if (gamePlaying){
-
-    
     // Roll a Random Number
         var dice = Math.floor(Math.random()*6) + 1;
         // Display the Number
@@ -35,7 +33,6 @@ document.querySelector('.btn--roll').addEventListener('click',function(){
             roundScore = 0;
             nextPlayer();    
     }
-
 }
 
 });
@@ -48,7 +45,8 @@ document.querySelector('.btn--hold').addEventListener('click',function(){
     //Pass it to other player
     if(scores[activePlayer] >= 100){
         document.querySelector('#name--'+activePlayer).textContent = 'Winner';
-        gamePlaying === false;
+        document.querySelector('.dice').style.display = 'none';
+        gamePlaying = false;
     } else {
         document.querySelector('#current--'+activePlayer).textContent = 0;
         roundScore = 0;
